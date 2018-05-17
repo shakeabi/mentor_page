@@ -225,7 +225,7 @@ srtbtn.onclick= function(){
 	console.log('sorting');
 	storage.sort(comp);
 	localStorage.clear();
-
+	storage=[];
 	localStorage.setItem("save", JSON.stringify(storage));
 	window.location.reload();
 
@@ -236,7 +236,7 @@ function store(){
 	console.log('storing');
 	console.log(Array.from(list.children).length);
 	localStorage.clear();
-	
+	storage=[];
 	for(var i=0;i<Array.from(list.children).length;++i)
 		{	storage[i]={name:"",rating:"",roll:"",comment:""};
 			storage[i].name = list.children[i].firstElementChild.firstElementChild.textContent;
@@ -244,6 +244,8 @@ function store(){
 			storage[i].roll = list.children[i].children[1].firstElementChild.firstElementChild.textContent;
 			storage[i].comment = list.children[i].children[1].children[1].textContent;
 		}
+
+	console.log(storage)
 	
 	localStorage.setItem("save", JSON.stringify(storage));
 }
