@@ -1,0 +1,280 @@
+*{
+	box-sizing: border-box;
+
+}
+
+body,html{
+
+	width: 100%;
+	height: 80vh;
+	background: #43C6AC;
+	background: -webkit-linear-gradient(left, #43C6AC, #F8FFAE); 
+ 	background: -o-linear-gradient(left , #43C6AC, #F8FFAE);/* why vertical gradient is not working?*/
+ 	background: -moz-linear-gradient(left , #43C6AC, #F8FFAE);
+
+ 	font-family: 'Open Sans';
+
+}
+
+.hidden{
+	display: none;
+}
+
+.clearfix:after{
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
+
+.container{
+	width: 80%;
+	height: 80vh;
+	margin: 10vh auto;
+	text-align: left;
+	color: #fff;
+}
+
+.header{
+	display: flex;
+	position: relative;
+	height:60px;
+	background: #333;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px #777;
+	-moz-box-shadow: 0 2px 1px #777;
+	box-shadow: 0 2px 1px #777;
+	font-size: 4.5vmin;
+	padding: 5px 0px 0px 10px;
+
+}
+
+#left {
+	margin-left: auto;
+	margin-right: 15px;
+	display: flex;
+}
+
+#add,#sort{
+	cursor: pointer;
+	margin-right: 15px;
+	margin-bottom: 5px; 
+	background: green;
+	border-radius: 2px;
+	-webkit-box-shadow:0 0 10px rgba(255, 255, 255, 0.5);
+	-moz-box-shadow:0 0 10px rgba(255, 255, 255, 0.5);
+	box-shadow:0 0 10px rgba(255, 255, 255, 0.5);
+	padding: 6px 5px;
+	font-size: 3vmin;
+	/*font-size: 1em;*/
+}
+
+#add:hover,#sort:hover{
+	background: darkgreen;
+}
+
+/*.menteearea{
+	height: 1900px;
+	background: #333;
+	margin-top: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+	overflow: auto;
+
+	display: grid;
+	grid-template-columns: repeat(9,1fr);
+	grid-column-gap: 2%;
+	grid-row-gap: 4%;
+	
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding: 0;
+}
+*/
+
+#new{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: auto;
+	background-color: #000000;
+	background-color: rgba(0,0,0,0.5); 
+}
+
+#modcontent{
+	background:#ffffff;
+	width: 50%;
+	position: absolute;
+	top:25%;
+	left: 25%;
+	border-radius: 5px;
+	-webkit-box-shadow:0 0 50px rgba(0, 191, 255, 0.8);
+	-moz-box-shadow:0 0 50px rgba(0, 191, 255, 0.5);
+	box-shadow:0 0 50px rgba(0, 191, 255, 0.8);
+}
+
+#formclose{
+	color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: 10px;
+
+}
+
+#formclose:hover,#formclose:focus{
+	color: #000000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/*form design*/
+input[type=text] {
+	width: 95%;		/*why 100% get some stuff outside*/
+	padding: 12px 20px;
+	margin: 5px 5px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	border: none;
+    border-bottom: 2px solid green;
+
+}
+
+input[type=number] {
+	width: 95%;
+	padding: 12px 20px;
+	margin: 5px 5px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	border: none;
+    border-bottom: 2px solid green;
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=submit] {
+    width: 95%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.jfbg{
+	background:#333;
+	height: 90%;
+}
+
+.menteearea{
+	background: #333;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	/*grid-row-gap: 4%; why isnt this working
+	grid-column-gap: 3%;*/
+
+	margin : 2% 0px;
+	padding: 0;
+}
+
+.mentee{
+	display: inline-block;
+	grid-column: span 1;
+	margin: 10px;
+	
+	font-size: 4vmin;
+}
+
+@media only screen and (max-width: 760px)
+{
+	.mentee{
+		grid-column: span 3;
+		display: inline-block;
+		margin: 10px;
+		
+		font-size: 4vmin;
+	}
+}
+
+
+.menthead{
+	display: flex;
+	background: #888;
+	border-radius: 3px;
+	padding: 3px;
+	
+}
+
+.namedis{
+	float: left;
+	cursor: pointer;
+}
+
+.edetails{
+	margin-left: auto;
+
+}
+
+.fa-trash{
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.odetails{
+	background: #333;
+	font-size: 3vmin;
+	border-radius: 3px;
+	/*display: none;*/
+	padding: 3px;
+
+	z-index: 2; /*why isnt this working?*/
+
+}
+
+.rono{
+	display: flex;
+	font-size: 2vmin;
+	justify-content: space-between;
+}
+
+
+.fa-edit{
+	display: block;
+	margin-left: auto;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 3px;
+	cursor: pointer;
+}
+
+.comments{
+	font-style: italic;
+	text-align: center;
+}
+

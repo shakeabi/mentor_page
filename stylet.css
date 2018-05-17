@@ -1,0 +1,64 @@
+.mentee{
+	width: 20%;
+	color: white;
+	font-size: 4vmin;
+}
+
+.clearfix:after{
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
+
+.menthead{
+	display: flex;
+	background: #888;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+.name{
+	float: left;
+	cursor: pointer;
+}
+
+.edetails{
+	margin-left: auto;
+}
+
+.fa-trash{
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.odetails{
+	background: #333;
+	font-size: 3vmin;
+	border-radius: 3px;
+	/*display: none;*/
+	padding: 3px;
+}
+
+.rono{
+	display: flex;
+	font-size: 2vmin;
+	justify-content: space-between;
+}
+
+
+.fa-edit{
+	display: block;
+	margin-left: auto;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 3px;
+	cursor: pointer;
+}
+
+.comments{
+	font-style: italic;
+	text-align: center;
+}
