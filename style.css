@@ -68,31 +68,14 @@ body,html{
 	box-shadow:0 0 10px rgba(255, 255, 255, 0.5);
 	padding: 6px 5px;
 	font-size: 3vmin;
-	/*font-size: 1em;*/
+	
 }
 
 #add:hover,#sort:hover{
 	background: darkgreen;
 }
 
-/*.menteearea{
-	height: 1900px;
-	background: #333;
-	margin-top: 20px;
-	border-radius: 5px;
-	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
-	overflow: auto;
 
-	display: grid;
-	grid-template-columns: repeat(9,1fr);
-	grid-column-gap: 2%;
-	grid-row-gap: 4%;
-	
-	margin-top: 2%;
-	margin-bottom: 2%;
-	padding: 0;
-}
-*/
 
 #new{
 	display: none;
@@ -196,8 +179,7 @@ button:focus {
 	background: #333;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	/*grid-row-gap: 4%; why isnt this working
-	grid-column-gap: 3%;*/
+	
 
 	margin : 2% 0px;
 	padding: 0;
@@ -250,7 +232,7 @@ button:focus {
 	background: #333;
 	font-size: 3vmin;
 	border-radius: 3px;
-	/*display: none;*/
+	
 	padding: 3px;
 
 	z-index: 2; /*why isnt this working?*/

@@ -16,7 +16,6 @@ var storage = [];
 
 
 var list = document.querySelector('.menteearea');
-//console.log(list.children[0].children[1].children[1].textContent);
 
 storage = JSON.parse(localStorage.getItem("save"));
 
@@ -222,7 +221,6 @@ function comp(x,y){
 }
 
 srtbtn.onclick= function(){
-	console.log('sorting');
 	storage.sort(comp);
 	localStorage.clear();
 	storage=[];
@@ -233,8 +231,6 @@ srtbtn.onclick= function(){
 
 
 function store(){
-	console.log('storing');
-	console.log(Array.from(list.children).length);
 	localStorage.clear();
 	storage=[];
 	for(var i=0;i<Array.from(list.children).length;++i)
@@ -245,7 +241,6 @@ function store(){
 			storage[i].comment = list.children[i].children[1].children[1].textContent;
 		}
 
-	console.log(storage)
 	
 	localStorage.setItem("save", JSON.stringify(storage));
 }
