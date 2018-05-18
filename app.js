@@ -223,7 +223,7 @@ function comp(x,y){
 srtbtn.onclick= function(){
 	storage.sort(comp);
 	localStorage.clear();
-	storage=[];
+	
 	localStorage.setItem("save", JSON.stringify(storage));
 	window.location.reload();
 
