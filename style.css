@@ -173,6 +173,7 @@ button:focus {
 .jfbg{
 	background:#333;
 	height: 90%;
+	border-radius: 5px;
 }
 
 .menteearea{
