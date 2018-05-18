@@ -14,7 +14,7 @@ var etemp;
 
 var storage = [];
 
-
+//localStorage.clear();
 var list = document.querySelector('.menteearea');
 
 storage = JSON.parse(localStorage.getItem("save"));
@@ -22,11 +22,13 @@ storage = JSON.parse(localStorage.getItem("save"));
 if(storage!=null){
   for(var i=0; i<storage.length;i++)
   {
-    var load = "<div class='mentee'><div class='menthead clearfix' style='background:"+defcolor(storage[i].rating)+"'><div class='namedis'>" + storage[i].name + "</div><div class='edetails'><span class='rate'>"+storage[i].rating+"</span><i class='fa fa-star'></i><i class='fa fa-trash'></i></div></div><div class='odetails hidden'><div class='rono'>"+storage[i].roll+ "</span><i class='fa fa-edit'></i></div><div class='comments'>"+storage[i].comment+"</div></div></div>";
+    var load = "<div class='mentee'><div class='menthead clearfix' style='background:"+defcolor(storage[i].rating)+"'><div class='namedis'>" + storage[i].name + "</div><div class='edetails'><span class='rate'>"+storage[i].rating+"</span><i class='fa fa-star'></i><i class='fa fa-trash'></i></div></div><div class='odetails hidden'><div class='rono'><span class='rollno'>"+storage[i].roll+ "</span><i class='fa fa-edit'></i></div><div class='comments'>"+storage[i].comment+"</div></div></div>";
     list.innerHTML += load;
   }
 }
 else storage=[];
+
+
 
 
 // pop up & adding
@@ -96,11 +98,11 @@ addform.addEventListener('submit',function(e){
 
 	 	switch(rating){
 	 		case '0': toparea.setAttribute('style','background: #f70804');break;
-	 		case '1': toparea.setAttribute('style','background: #f7ba04');break;
-	 		case '2': toparea.setAttribute('style','background: #f7e604');break;
-	 		case '3': toparea.setAttribute('style','background: #eeff00');break;
-	 		case '4': toparea.setAttribute('style','background: #5da801');break;
-	 		case '5': toparea.setAttribute('style','background: #8bfc00');break;
+	 		case '1': toparea.setAttribute('style','background: #ff8300');break;
+	 		case '2': toparea.setAttribute('style','background: #dd9b02');break;
+	 		case '3': toparea.setAttribute('style','background: #e3e800');break;
+	 		case '4': toparea.setAttribute('style','background: #8bfc00');break;
+	 		case '5': toparea.setAttribute('style','background: #5da801');break;
 	 		default :break;
 	 	}
 
@@ -132,11 +134,11 @@ addform.addEventListener('submit',function(e){
 
 			switch(ratingtag.value){
 	 		case '0': etemp.target.parentElement.parentElement.previousElementSibling.style.background = '#f70804';break;
-	 		case '1': etemp.target.parentElement.parentElement.previousElementSibling.style.background = '#f7ba04';break;
-	 		case '2': etemp.target.parentElement.parentElement.previousElementSibling.style.background = '#f7e604';break;
-	 		case '3': etemp.target.parentElement.parentElement.previousElementSibling.style.background = '#eeff00';break;
-	 		case '4': etemp.target.parentElement.parentElement.previousElementSibling.style.background = '#5da801';break;
-	 		case '5': etemp.target.parentElement.parentElement.previousElementSibling.style.background = '#8bfc00';break;
+	 		case '1': etemp.target.parentElement.parentElement.previousElementSibling.style.background = '#ff8300';break;
+	 		case '2': etemp.target.parentElement.parentElement.previousElementSibling.style.background = '#dd9b02';break;
+	 		case '3': etemp.target.parentElement.parentElement.previousElementSibling.style.background = '#e3e800';break;
+	 		case '4': etemp.target.parentElement.parentElement.previousElementSibling.style.background = '#8bfc00';break;
+	 		case '5': etemp.target.parentElement.parentElement.previousElementSibling.style.background = '#5da801';break;
 	 		default :break;
 
 	 		}
@@ -239,8 +241,9 @@ function store(){
 			storage[i].rating = list.children[i].firstElementChild.children[1].firstElementChild.textContent;
 			storage[i].roll = list.children[i].children[1].firstElementChild.firstElementChild.textContent;
 			storage[i].comment = list.children[i].children[1].children[1].textContent;
-		}
 
+		}
+	
 	
 	localStorage.setItem("save", JSON.stringify(storage));
 }
@@ -248,11 +251,11 @@ function store(){
 function defcolor(rtemp){
 	switch(rtemp){
 	 		case '0': return '#f70804';break;
-	 		case '1': return '#f7ba04';break;
-	 		case '2': return '#f7e604';break;
-	 		case '3': return '#eeff00';break;
-	 		case '4': return '#5da801';break;
-	 		case '5': return '#8bfc00';break;
+	 		case '1': return '#ff8300';break;
+	 		case '2': return '#dd9b02';break;
+	 		case '3': return '#e3e800';break;
+	 		case '4': return '#8bfc00';break;
+	 		case '5': return '#5da801';break;
 	 		default : return '#333';break;
 
 	 		}
